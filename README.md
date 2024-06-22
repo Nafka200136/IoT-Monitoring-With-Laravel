@@ -68,3 +68,15 @@ Proyek ini adalah sistem monitoring suhu dan kelembaban secara real-time menggun
    
 
 Link video YouTube : https://www.youtube.com/watch?v=fF1s-79jZDo
+
+Note: Direktori file tambahan
+
+File WebSocket Client
+script.js : **public/assets/js/script.js**
+
+File WebSocket Serve
+server.js : **resources/js/server.js**
+
+File Arduino: **public/assets/arduino/esp8266_suhu_kelembaban_led/esp8266_suhu_kelembaban_led.ino**
+
+
