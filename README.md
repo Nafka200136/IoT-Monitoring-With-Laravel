@@ -65,3 +65,6 @@ Proyek ini adalah sistem monitoring suhu dan kelembaban secara real-time menggun
     ```sh
    npm run iot
     ```
+   
+
+Link video YouTube : https://www.youtube.com/watch?v=fF1s-79jZDo
