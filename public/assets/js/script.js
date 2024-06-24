@@ -25,7 +25,8 @@ const chartSuhu = new Chart(ctxSuhu, {
                     unit: 'second',
                     displayFormats: {
                         second: 'h:mm:ss a'
-                    }
+                    },
+                beginAtZero: true
                 }
             },
             y: {
@@ -65,7 +66,8 @@ const chartKelembaban = new Chart(ctxKelembaban, {
                     displayFormats: {
                         second: 'h:mm:ss a'
                     }
-                }
+                },
+                beginAtZero: true
             },
             y: {
                 type: 'linear',

@@ -6,7 +6,7 @@
 #include <DHT.h>
 
 // Konfigurasi sensor DHT11
-#define DHTPIN D4
+#define DHTPIN D5
 #define DHTTYPE DHT11
 DHT dht(DHTPIN, DHTTYPE);
 
@@ -49,12 +49,14 @@ void callback(char* topic, byte* payload, unsigned int length) {
 
     // unsigned long start = millis();
     if (String(nim) == myNim) {
-        if (String(messages) == "D5=1") { digitalWrite(D5, HIGH); }
+        if (String(messages) == "D3=1") { digitalWrite(D3, HIGH); }
+        if (String(messages) == "D4=1") { digitalWrite(D4, HIGH); }
         if (String(messages) == "D6=1") { digitalWrite(D6, HIGH); }
         if (String(messages) == "D7=1") { digitalWrite(D7, HIGH); }
         if (String(messages) == "D8=1") { digitalWrite(D8, HIGH); }
 
-        if (String(messages) == "D5=0") { digitalWrite(D5, LOW); }
+        if (String(messages) == "D3=0") { digitalWrite(D3, LOW); }
+        if (String(messages) == "D4=0") { digitalWrite(D4, LOW); }
         if (String(messages) == "D6=0") { digitalWrite(D6, LOW); }
         if (String(messages) == "D7=0") { digitalWrite(D7, LOW); }
         if (String(messages) == "D8=0") { digitalWrite(D8, LOW); }
@@ -67,10 +69,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
      Serial.print(nim);
      Serial.print(" Messages: ");
      Serial.println(messages);
-    // unsigned long end = millis();
-    // Serial.print("Processing time: ");
-    // Serial.print(end - start);
-    // Serial.println(" ms");
+
 }
 
 void reconnect() {
@@ -132,6 +131,7 @@ void publishData(float temperature, float humidity) {
 void initPins() {
     pinMode(D1, OUTPUT);
     pinMode(D2, OUTPUT);
+    pinMode(D3, OUTPUT);
     pinMode(D4, OUTPUT);
     pinMode(D5, OUTPUT);
     pinMode(D6, OUTPUT);

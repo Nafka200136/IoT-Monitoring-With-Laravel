@@ -10,18 +10,20 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
 
-                    <div id="data" class="grid grid-cols-2 gap-4">
-                        <div class="flex flex-col justify-center bg-orange-400 dark:bg-orange-950 rounded-lg shadow-md mb-6">
-                            <div class="p-4">
-                                <p class="text-xl">Suhu: <span id="suhu" class="font-extrabold">0</span> °C</p>
-                                <p class="text-xl">Kelembaban: <span id="kelembaban" class="font-extrabold">0</span> %</p>
+                    <div id="data" class="grid grid-rows-1 gap-4">
+                        <div class="flex flex-col justify-center items-center mb-6">
+                            <div class="p-4 text-center">
+                                <p class="text-3xl">Suhu: <span id="suhu" class="font-extrabold text-red-600">0</span> °C</p>
+                                <p class="text-3xl">Kelembaban: <span id="kelembaban" class="font-extrabold text-blue-600">0</span> %</p>
                             </div>
                         </div>
 
                         <div class="flex flex-rows justify-between mb-6" x-data="{ pins: [
-                                                 { id:1, label: 'D5' },
-                                                 { id:2, label: 'D6' },
-                                                 { id:3, label: 'D7' }
+                                                 { id:1, label: 'D3' },
+                                                 { id:2, label: 'D4' },
+                                                 { id:3, label: 'D6' },
+                                                 { id:4, label: 'D7' },
+                                                 { id:5, label: 'D8' }
                                             ] }">
                             <template x-data="{ status: false  }" x-for="pin in pins" :key="pin.id">
                                 <div class="p-4 bg-orange-400 dark:bg-orange-950 rounded-lg shadow-md" x-data="{ ledStatus: status}">
